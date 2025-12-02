@@ -50,10 +50,14 @@ public class Main {
             socket.close();
             return;
         }
+        
         System.out.println(path);
         if (path.endsWith("/")) {
             path += "index.html";
-        }else if(!path.contains(".")){
+        }
+        File root = new File("sito").getCanonicalFile();
+        File file = new File(root, path.substring(1)).getCanonicalFile();
+        if(file.isDirectory() ){
             String header =
             "HTTP/1.1 " + "302" + " " + "Found" + "\r\n" +
             "Location: " + path+"/"+ "\r\n" +
@@ -62,10 +66,7 @@ public class Main {
             return;
         }
 
-        File root = new File("sito").getCanonicalFile();
-        File file = new File(root, path.substring(1)).getCanonicalFile();
-
-        if (!file.exists() || file.isDirectory() || !file.getPath().startsWith(root.getPath())) {
+        if (!file.exists()|| !file.getPath().startsWith(root.getPath())) {
             sendTextResponse(out, 404, "Not Found", "File non trovato");
             socket.close();
             return;
