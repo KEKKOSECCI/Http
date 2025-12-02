@@ -3,41 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="stylesheet" href="style.css">
-    <title>La Storia di Fabio Ricci</title>
+    <title>Questo è Sesto</title>
 </head>
-<body>
+<body class="min-h-screen bg-cover bg-center text-gray-800" style="background-image: url('SFONDO.jpg');">
 
-    <h1>Benvenuto nella storia di Fabio Ricci</h1>
+    <!-- NAVBAR -->
+    <nav class="w-full bg-cyan-200/80 backdrop-blur-md shadow-lg p-4">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-cyan-700 drop-shadow-sm">
+                Questo è Sesto
+            </h1>
 
-    <!-- CONTENITORE GRANDE -->
-    <div class="main-container">
-
-        <!-- COLONNA SINISTRA -->
-        <div class="content">
-            <p>C'era una volta un ragazzo di nome Fabio Ricci, che, purtroppo, non capiva un cazzo di informatica. Non riusciva proprio a stare al passo con le tecnologie, e, quando arrivò il momento di scegliere l'indirizzo scolastico giusto, fece un errore clamoroso.</p>
-            <p>Fabio si ritrovò in un percorso che non gli piaceva affatto, ma per fortuna aveva una mano amica su cui contare: Federica, la sua compagna di classe, sempre pronta a dargli un consiglio, a fargli da spalla e a confortarlo quando ne aveva bisogno.</p>
-            <p>Così, anche nei giorni più difficili, Fabio sapeva che non era solo e che Federica sarebbe stata sempre lì per lui. In fondo, un amico vero è quello che ti aiuta anche a capire che puoi migliorare, anche se sei un disastro totale in qualcosa.</p>
+            <ul class="flex gap-6 text-lg">
+                <li><a href="assorgia.html" class="text-cyan-900 hover:text-cyan-600 font-semibold">Assorgia</a></li>
+                <li><a href="cozzi.html" class="text-cyan-900 hover:text-cyan-600 font-semibold">Cozzi</a></li>
+                <li><a href="volo.html" class="text-cyan-900 hover:text-cyan-600 font-semibold">Volo</a></li>
+                <li><a href="lunghi.html" class="text-cyan-900 hover:text-cyan-600 font-semibold">Lunghi</a></li>
+                <li><a href="magno.html" class="text-cyan-900 hover:text-cyan-600 font-semibold">Magno</a></li>
+            </ul>
         </div>
+    </nav>
 
-        <!-- COLONNA DESTRA -->
-        <div class="card">
-            <img src="images/ricci.jpeg" alt="Foto di Fabio Ricci">
-            <p class="title">Fabio Ricci</p>
-            <p><strong>Nascita:</strong> 26/04/07</p>
-            <p><strong>Altezza:</strong> Poca</p>
-            <p><strong>Aspetti:</strong> È brutto</p>
-        </div>
+    <!-- CONTENUTO -->
+    <div class="max-w-4xl mx-auto mt-10 p-6 bg-white/70 backdrop-blur-lg rounded-2xl shadow-xl">
+        <h2 class="text-3xl font-bold text-cyan-800 mb-4">Benvenuto in Questo è Sesto</h2>
 
-    </div>
+        <p class="text-lg leading-7 mb-4">
+            Questo sito racconta le storie, i miti e le leggende dei ragazzi di Sesto.
+            Ogni pagina è dedicata a una figura importante, descritta nei dettagli
+            con verità assolutamente <span class="font-semibold">non garantita</span>.
+        </p>
 
-    <div class="button-container">
-        <button id="segheButton">Seghe Settimanale</button>
-        <div class="counter" id="counter">0</div>
-    </div>
+        <p class="text-lg leading-7 mb-4">
+            Qui puoi esplorare l’epica Assorgia, l’inquietante Volo, la misteriosa Lunghi,
+            il devastante Cozzi e l’inspiegabile Magno.
+        </p>
 
-    <div class="footer">
-        <p>&copy; 2025 La Storia di Fabio Ricci. Tutti i diritti riservati.</p>
+        <p class="text-lg leading-7">
+            Scegli uno dei nomi nella navbar e inizia il viaggio.
+        </p>
     </div>
 
     <script src="script.js"></script>
