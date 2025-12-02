@@ -50,9 +50,16 @@ public class Main {
             socket.close();
             return;
         }
-
+        System.out.println(path);
         if (path.endsWith("/")) {
             path += "index.html";
+        }else if(!path.contains(".")){
+            String header =
+            "HTTP/1.1 " + "302" + " " + "Found" + "\r\n" +
+            "Location: " + path+"/"+ "\r\n" +
+            "\r\n";
+            out.write(header.getBytes(StandardCharsets.US_ASCII)); 
+            return;
         }
 
         File root = new File("sito").getCanonicalFile();

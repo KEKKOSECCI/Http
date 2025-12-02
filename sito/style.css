@@ -1,10 +1,31 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f7eefa;
     color: #444;
     margin: 0;
     padding: 20px;
+    
+    /* Sfondo */
+    background-image: url('/images/sesto.jpg');
+    background-size: cover;        /* L'immagine copre tutto lo schermo */
+    background-position: center;   /* Centra l'immagine */
+    background-repeat: no-repeat;  /* Non ripetere l'immagine */
+    background-attachment: fixed;  /* Sfondo fisso durante lo scroll */
+    
+    /* Overlay leggero per pastello */
+    position: relative;
 }
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4); /* Sovrapposizione pastello chiara */
+    z-index: -1; /* Dietro tutti gli elementi */
+}
+
 
 h1 {
     color: #6a5acd;
